@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+body {
+  font: 1em/1 "Montserrat", sans-serif;
+  text-align: center;
+  padding: 1em 5%;
+
+}
+
+.nao-metal {
+  background-color: rgb(171, 145, 255);
+}
+
+.gas-nobre {
+  background-color: rgb(145, 223, 255);
+}
+
+.metal-alcalino {
+  background-color: rgb(255, 197, 145);
+}
+
+.metal-alcalino-terroso {
+  background-color: rgb(255, 223, 145);
+}
+
+.semimetal {
+  background-color: rgb(146, 255, 159);
+}
+
+.halogenio {
+  background-color: rgb(249, 145, 255);
+}
+
+.outros-metais {
+  background-color: rgb(255, 249, 145);
+}
+
+.metal-transicao {
+  background-color: rgb(236, 255, 145);
+}
+
+.lantanideo {
+  background-color: rgb(210, 255, 145);
+}
+
+.actinidio {
+  background-color: rgb(184, 255, 145);
+}
+
+.desconhecido {
+  background-color: rgb(200, 200, 200);
+}
+
+h1 {
+  margin: 0.5em 0;
+  font-size: calc(3vw + 2rem);
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p:last-child {
+  font-size: 0.8em;
+}
+
+main {
+  margin: auto;
+  max-width: 45em;
+  display: flex;
+}
+
+#grid-container {
+  flex-grow: 1;
+  min-width: 7em;
+  border: none;
+}
+
+.col-hidden {
+  display: none;
+}
+
+div {
+  height: 7em;
+  background: var(--bg-preto);
+  border: 0.125rem solid;
+  border-radius: 0.25rem;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+span {
+  font-size: 0.75em;
+  position: absolute;
+  top: 0.3em;
+  left: 0.5em;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 1em;
+}
+
+li {
+  flex-basis: 100%;
+  line-height: 1.25;
+  margin-bottom: 1em;
+}
+
+li:before {
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 0.125em solid;
+  border-radius: 0.125rem;
+  margin-right: 0.5em;
+  position: relative;
+  top: 0.25em;
+}
+
+@media only screen and (min-width: 92.5em) {
+  @supports (display: grid) {
+    body {
+      font-size: 0.65em;
+      padding: 2em;
+    }
+
+    main {
+      max-width: 130.5em;
+      display: block;
+    }
+
+    #grid-container {
+      display: grid;
+      grid-template-columns: repeat(18, 7em);
+      grid-gap: 0.25em;
+    }
+
+    .col-span18 {
+      grid-column: span 18;
+    }
+
+    .col-span16 {
+      grid-column: span 16;
+    }
+
+    .col-span10 {
+      grid-column: span 10;
+    }
+
+    .col-span3 {
+      grid-column: span 3;
+    }
+
+    .col-hidden {
+      display: block;
+      visibility: hidden;
+    }
+
+    section {
+      margin: 0;
+    }
+
+    ul {
+      justify-content: center;
+    }
+
+    li {
+      flex-basis: auto;
+      margin-bottom: 0;
+    }
+
+    li + li {
+      margin-left: 2em;
+    }
+  }
+}
+
+@media only screen and (min-width: 102.5em) {
+  body {
+    font-size: 0.75em;
+  }
+}
